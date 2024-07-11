@@ -1,7 +1,6 @@
 <h1 align="center"> To-do List (Lista de Tarefas) </h1>
 
 <p> Projeto "To-do List" feito para validar conhecimento adquirido relacionado a PHP e Banco de Dados.<br/>
-Clique aqui para visualizar o projeto: https://bit.ly/45KHrGM
 
 ## 🚀 Tecnologias
 
