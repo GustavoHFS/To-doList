@@ -3,7 +3,7 @@ require_once('database/conn.php');
 
 $tasks = [];
 
-$sql = $pdo->query("SELECT * FROM task");
+$sql = $pdo->query("SELECT * FROM task ORDER BY id ASC");
 
 if ($sql->rowCount() > 0) {
     $tasks = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -25,8 +25,16 @@ if ($sql->rowCount() > 0) {
     <div id="to_do">
         <h1>Things to do</h1>
 
-        <form action="actions/create.php" method="POST" class="to-do-form">
-            <input type="text" name="description" placeholder="Write your task here" required>
+        <form 
+        action="actions/create.php" 
+        method="POST" 
+        class="to-do-form">
+            
+            <input 
+            type="text" 
+            name="description" 
+            placeholder="Write your task here" required>
+
             <button type="submit" class="form-button">
                 <i class="fa-solid fa-plus"></i>
             </button>
@@ -35,6 +43,7 @@ if ($sql->rowCount() > 0) {
         <div id="tasks">
             <?php foreach($tasks as $task): ?>
                 <div class="task">
+                    
                     <input 
                     type="checkbox" 
                     name="progress" 
@@ -56,11 +65,27 @@ if ($sql->rowCount() > 0) {
                         </a>
                     </div>
 
-                    <form action="" class="to-do-form edit-task hidden">
-                        <input type="text" name="description" placeholder="Edit your task here">
+                    <form 
+                    action="actions/update.php" 
+                    method="POST" 
+                    class="to-do-form edit-task hidden">
+                        
+                        <input 
+                        type="text" 
+                        class="hidden" 
+                        name="id" 
+                        value="<?= $task['id']?>">
+                        
+                        <input 
+                        type="text" 
+                        name="description" 
+                        placeholder="Edit your task here" 
+                        value="<?= $task['description']?>">
+                        
                         <button type="submit" class="form-button confirm-button">
                             <i class="fa-solid fa-check"></i>
                         </button>
+
                     </form>
                 </div>
             <?php endforeach ?>    
