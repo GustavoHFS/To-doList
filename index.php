@@ -51,7 +51,7 @@ if ($sql->rowCount() > 0) {
                             <i class="fa-regular fa-pen-to-square"></i>
                         </a>
 
-                        <a href="#" class="action-button delete-button">
+                        <a href="actions/delete.php?id=<?= $task['id'] ?>" class="action-button delete-button">
                             <i class="fa-regular fa-trash-can"></i>
                         </a>
                     </div>
