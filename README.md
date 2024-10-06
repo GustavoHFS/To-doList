@@ -2,6 +2,12 @@
 
 <p> Projeto "To-do List" feito para validar conhecimento adquirido relacionado a PHP e Banco de Dados.<br/>
 
+![image](https://github.com/user-attachments/assets/fc69d4bc-793c-4ac1-8418-488f78029c6c)
+![Captura de tela 2024-10-06 030330](https://github.com/user-attachments/assets/6a40283b-6bfc-4754-bd8e-7d317b838ec0)
+
+
+
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
